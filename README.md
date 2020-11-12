@@ -68,6 +68,6 @@
   bills_type = "OUTGO"
   ```
 
-## 2. 说明
+### 2. 说明
 
 导出的 csv 文件编码格式为 `UTF-8` 类型，如果使用 Microsoft Excel 打开有乱码，请修改编码格式为 `gb2312`。
