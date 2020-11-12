@@ -6,7 +6,7 @@ import time
 
 '''
 作者：Coegle18
-链接：https://github.com/coelge
+链接：https://github.com/Coegle/youqian_163_scraper
 创建时间：2020/11/11
 '''
 
