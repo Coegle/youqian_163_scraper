@@ -4,7 +4,7 @@
 
 由于网易有钱 App 目前处于无人维护的状态，无法通过充值会员等正常途径导出账单，此程序通过爬取[网易有钱网页版](https://qian.163.com)的数据生成 csv 格式的账单数据。
 
-![running](https://github.com/Coegle/imageRespository/blob/main/youqian_163_scraper_image/running.gif)
+![running](youqian_163_scraper_image/running.gif)
 
 ## 使用方法
 
@@ -12,11 +12,11 @@
 
 - Cookies 配置
 
-  ![login](https://github.com/Coegle/imageRespository/blob/main/youqian_163_scraper_image/login_page.png)
+  ![login](youqian_163_scraper_image/login_page.png)
 
   登录[网易有钱](https://qian.163.com/pc/login.html)，按 F12 键调出开发者选项，进入 `Application -> Cookies -> https://qian.163.com`，找到所有的 Cookies 信息。
 
-  ![Cookies](https://github.com/Coegle/imageRespository/blob/main/youqian_163_scraper_image/cookies.png)
+  ![Cookies](youqian_163_scraper_image/cookies.png)
 
   将 cookie 对应的值依次填写在代码中对应的位置，以代替`请修改此个人数据`。
 
