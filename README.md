@@ -18,7 +18,7 @@
 
   ![Cookies](img/cookies.png)
 
-  将 cookie 对应的值依次填写在代码中对应的位置，以代替`请修改此个人数据`。
+  将 cookie 对应的值依次填写在代码中对应的位置，以代替`请修改此个人数据`。如果本地浏览器没有保存某一项 Cookies，可以将该字段整个删除。
 
   ```python
   cookies = {"_ntes_nnid": "请修改此个人数据",
