@@ -21,18 +21,13 @@
   将 cookie 对应的值依次填写在代码中对应的位置，以代替`请修改此个人数据`。如果本地浏览器没有保存某一项 Cookies，可以将该字段整个删除。
 
   ```python
-  cookies = {"_ntes_nnid": "请修改此个人数据",
-             "s_n_f_l_n3": "请修改此个人数据",
-             "_ntes_nuid": "请修改此个人数据",
-             "ne_analysis_trace_id": "请修改此个人数据",
-             "vinfo_n_f_l_n3": "请修改此个人数据",
-             "SERVER_ID": "请修改此个人数据",
-             "TOKEN": "请修改此个人数据",
-             "mail_client_uuid": "请修改此个人数据",
-             "NTES_OSESS": "请修改此个人数据",
-             "S_OINFO": "请修改此个人数据",
-             "P_OINFO": "请修改此个人数据"
-             }
+  cookies = {"SERVER_ID": "请修改此个人数据",
+           "TOKEN": "请修改此个人数据",
+           "mail_client_uuid": "请修改此个人数据",
+           "NTES_OSESS": "请修改此个人数据",
+           "S_OINFO": "请修改此个人数据",
+           "P_OINFO": "请修改此个人数据"
+           }
   ```
 
 - url 配置

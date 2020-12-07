@@ -24,12 +24,7 @@ import time
 - 详细说明请见 README.md
 - 使用过程中如果有问题欢迎发邮件：coegle18[AT]gmail.com（将 [AT] 替换为 @）
 '''
-cookies = {"_ntes_nnid": "请修改此个人数据",
-           "s_n_f_l_n3": "请修改此个人数据",
-           "_ntes_nuid": "请修改此个人数据",
-           "ne_analysis_trace_id": "请修改此个人数据",
-           "vinfo_n_f_l_n3": "请修改此个人数据",
-           "SERVER_ID": "请修改此个人数据",
+cookies = {"SERVER_ID": "请修改此个人数据",
            "TOKEN": "请修改此个人数据",
            "mail_client_uuid": "请修改此个人数据",
            "NTES_OSESS": "请修改此个人数据",
@@ -39,7 +34,7 @@ cookies = {"_ntes_nnid": "请修改此个人数据",
 url = "https://qian.163.com/pc/xhr/data/bill/list.do?token=请修改此个人数据（和 cookies 中的 TOKEN 值相同）"
 file_name = 'youqian_out.csv'
 start_time = datetime(2017, 1, 1)
-end_time = datetime(2020, 11, 11)
+end_time = datetime(2020, 12, 7)
 bills_type = "OUTGO"    # TRANSFER INCOME OUTGO
 # 需要修改的参数到此结束
 
@@ -175,6 +170,8 @@ def get_bills(trade_type):
     print("共 %d 页，%d 条数据，三秒钟之后开始读取" % (total_page, total))
     time.sleep(3)
     for i in range(0, total_page):
+        if i % 10 == 0:
+            time.sleep(1)
         params = get_params_to_page(i, trade_type)
         print("page%d" % i)
         response = requests.post(url, headers=headers, cookies=cookies, data=json.dumps(params))
