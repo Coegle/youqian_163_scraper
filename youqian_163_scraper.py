@@ -159,8 +159,13 @@ def get_params_to_page(page, trade_type):
 def get_params_of_all(trade_type):
     params = get_params_to_page(0, trade_type)
     response = requests.post(url, headers=headers, cookies=cookies, data=json.dumps(params))
-    total_page = json.loads(response.text)["data"]["pagination"]["totalPage"]
-    total = json.loads(response.text)["data"]["pagination"]["total"]
+    if response.status_code == 200 and json.loads(response.text)["code"] == 200:
+        total_page = json.loads(response.text)["data"]["pagination"]["totalPage"]
+        total = json.loads(response.text)["data"]["pagination"]["total"]
+    else:
+        print("出错：Code %d \n %s" %(response.status_code, response.text))
+        total_page = 0
+        total = 0
     return total_page, total
 
 
